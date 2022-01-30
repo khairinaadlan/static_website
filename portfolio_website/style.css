@@ -20,6 +20,16 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+.section-heading {
+    font-size: 5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 15rem;
+    border-bottom: 0.3rem solid #333;
+    text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
 /* End of Reset and Common Styles */
 
 /* Section 1 */
@@ -79,10 +89,10 @@ html {
     font-weight: 700;
     color: #333;
     background-color: #fff;
-    border: .3rem solid #333;
-    padding: .5rem 1rem;
+    border: 0.3rem solid #333;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
 }
 
 /* End of Section 1 */
@@ -92,7 +102,7 @@ html {
     width: 100%;
     height: 4rem;
     background-color: #e41c6f;
-    box-shadow: .2rem .2rem .5rem #555;
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
     /* x,y,blur-radius,color */
 }
 
@@ -101,7 +111,7 @@ html {
     font-weight: 600;
     color: #333;
     margin: 0 3rem;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
     position: relative;
     /* because position the line according to the parent element */
@@ -116,7 +126,7 @@ html {
 .navbar-link::before {
     content: "";
     width: 0;
-    height: .2rem;
+    height: 0.2rem;
     background-color: #fff;
     position: absolute;
     right: -15%;
@@ -139,16 +149,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.section-2-heading {
-    font-size: 5rem;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    margin-bottom: 15rem;
-    border-bottom: 0.3rem solid #333;
-    text-shadow: 0.2rem 0.2rem 0.5rem #555;
 }
 
 .progress-bar-wrapper {
@@ -208,7 +208,7 @@ html {
     font-size: 10rem;
     color: #888;
     margin-bottom: 2rem;
-    text-shadow: .1rem .1rem .5rem #555;
+    text-shadow: 0.1rem 0.1rem 0.5rem #555;
 }
 
 .service h2 {
@@ -216,9 +216,100 @@ html {
     color: #fff;
     background-color: #777;
     width: 25rem;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
     transform: skew(-10deg);
-    box-shadow: .2rem .2rem .5rem #555;
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
 }
 
 /* End of Section 2 */
+
+/* Section 3 */
+
+.section-3 {
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    background-color: #eff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-wrapper {
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: #fff;
+    box-shadow: 0.3rem 0.3rem 0.5rem #777;
+    position: relative;
+    overflow: hidden;
+    /* apa yang overflow dalam box is hidden */
+    transition: box-shadow 0.5s;
+}
+
+.project:hover {
+    box-shadow: 1rem 1rem 1rem #777;
+}
+
+.project-text {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    top: -10rem;
+    z-index: 10;
+    /* supaya can be selected */
+    transition: top 0.3s;
+}
+
+.project:hover .project-text {
+    top: 5rem;
+    transition: top 0.3s 0.3s;
+    /* top transition 0.3s delay 0.3s */
+}
+
+.project-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.project-technologies {
+    font-size: 1.8rem;
+    color: #e41c6f;
+}
+
+.project-img {
+    width: 40rem;
+    transition: opacity 0.3s;
+}
+
+.project:hover .project-img {
+    opacity: 0.2;
+}
+
+.project-link {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.1rem;
+    border: 0.3rem solid #e41c6f;
+    padding: 0 1rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: -5rem;
+    transition: bottom 0.3s;
+}
+
+.project:hover .project-link {
+    bottom: 5rem;
+    transition: bottom 0.3s 0.3s;
+}
+/* End of Section 3 */
