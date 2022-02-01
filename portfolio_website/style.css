@@ -13,6 +13,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 .center {
@@ -104,6 +105,13 @@ html {
     background-color: #e41c6f;
     box-shadow: 0.2rem 0.2rem 0.5rem #555;
     /* x,y,blur-radius,color */
+    position: absolute;
+    z-index: 300;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
 }
 
 .navbar-link {
@@ -116,6 +124,10 @@ html {
     position: relative;
     /* because position the line according to the parent element */
     transition: color 0.2s;
+}
+
+.change.navbar-link {
+    color: #fff;
 }
 
 .navbar-link:hover {
@@ -133,6 +145,10 @@ html {
     /* to center the line 30%/2 */
     bottom: -0.3rem;
     transition: width 0.2s;
+}
+
+.change.navbar-link::before {
+    width: 130%;
 }
 
 .navbar-link:hover::before {
@@ -179,7 +195,7 @@ html {
 }
 
 .progress-percent {
-    width: 90%;
+    width: 0;
     height: 100%;
     background-color: #e41c6f;
     border-radius: 0.3rem;
@@ -313,3 +329,87 @@ html {
     transition: bottom 0.3s 0.3s;
 }
 /* End of Section 3 */
+
+/* Section 4 */
+.section-4 {
+    width: 100%;
+    height: 70vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-4-heading {
+    color: #fff;
+    box-shadow: none;
+    border-color: #fff;
+    margin-bottom: 5rem;
+}
+
+.contact-form {
+    width: 50rem;
+    flex-direction: column;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: #eef;
+    font-size: 1.5rem;
+    border: 0.2rem solid #ef1c6f;
+    color: #555;
+}
+
+.contact-form textarea {
+    height: 10rem;
+    max-height: 15rem;
+    max-width: 100%;
+}
+/* because textarea can be resize manually */
+
+.contact-form .contact-form-btn {
+    background-color: #ef1c6f;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    cursor: pointer;
+}
+/* End of Section 4 */
+
+/* Section 5 */
+.section-5 {
+    width: 100%;
+    height: 30vh;
+    background-color: #222;
+    flex-direction: column;
+}
+
+.social-media {
+    margin-bottom: 5rem;
+}
+
+.social-media-link {
+    margin: 0.2rem;
+    padding: .7rem;
+    background-color: #e41c6f;
+    border-radius: .5rem;
+    display: inline-block;
+}
+
+.social-media-link i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.copyright {
+    color: #aaa;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    font-weight: 300;
+    text-align: center;
+}
+/* End of Section 5 */
