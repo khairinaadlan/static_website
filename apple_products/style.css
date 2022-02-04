@@ -152,10 +152,11 @@ html {
     height: 55rem;
     transform-style: preserve-3d;
     /* it will share 3d elements to its child elements */
-    transform: rotateY(91deg);
+    /* transform: rotateY(91deg); */
     /* move the cube up so hv space w/ controller */
     position: relative;
     top: -2rem;
+    transition: transform 0.5s;
 }
 
 .front-side,
